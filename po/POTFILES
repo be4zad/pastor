@@ -1,0 +1,6 @@
+data/org.pastor.Pastor.desktop.in
+data/org.pastor.Pastor.appdata.xml.in
+data/org.pastor.Pastor.gschema.xml
+src/main.vala
+src/window.vala
+src/window.ui

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Pastor
+Name[fa]=پاستور
+Comment=Paste the text and get the text link
+Comment[fa]=متن را الصاق کنید و لینک متن را دریافت کنید
+Exec=pastor
+Icon=org.pastor.Pastor
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Network;Utility;TextTools;
+StartupNotify=true
+X-Purism-FormFactor=Workstation;Mobile;

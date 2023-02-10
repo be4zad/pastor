@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/pastor/Pastor/ui">
+    <file preprocess="xml-stripblanks" alias="window.ui">ui/window.ui</file>
+    <file preprocess="xml-stripblanks" alias="help-overlay.ui">ui/help-overlay.ui</file>
+  </gresource>
+</gresources>
