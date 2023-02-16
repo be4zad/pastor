@@ -2,6 +2,7 @@ pastor_sources = [
   'main.vala',
   'application.vala',
   'window.vala',
+  'api/pastebin.viradev.ir.vala',
 ]
 
 pastor_deps = [
