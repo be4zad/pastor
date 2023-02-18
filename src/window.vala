@@ -27,6 +27,14 @@ namespace Pastor {
         private unowned TextView text_input;
         [GtkChild]
         private unowned Overlay text_input_overlay;
+        [GtkChild]
+        private unowned Button get_link_button;
+        [GtkChild]
+        public unowned Stack main_stack;
+        [GtkChild]
+        private unowned StackPage main_clamp_result_page;
+        [GtkChild]
+        private unowned Adw.ActionRow result_action_row;
 
         private Label text_input_overlay_label;
         private TextBuffer text_input_buffer;
@@ -35,6 +43,8 @@ namespace Pastor {
             Object (application: app);
             add_text_input_overlay ();
             add_text_input_buffer ();
+            /*get_link_button.clicked.connect (() => {
+            });*/
         }
 
         protected void add_text_input_buffer () {
@@ -58,6 +68,11 @@ namespace Pastor {
                 sensitive = false
             };
             text_input_overlay.add_overlay (text_input_overlay_label);
+        }
+
+        public void set_result (string pastebin_link) {
+            if (pastebin_link != "")
+                result_action_row.title = pastebin_link;
         }
     }
 }

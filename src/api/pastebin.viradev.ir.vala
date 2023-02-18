@@ -38,7 +38,7 @@ namespace Pastor {
             }
         }
 
-        public async void send_request (string paste_text) {
+        public async void send_request (string paste_text, Window win) {
             try {
                 Soup.Session session = new Soup.Session ();
                 Soup.Message message = new Soup.Message("POST", "http://pastebin.viradev.ir/pastebin/api/create");
@@ -49,10 +49,12 @@ namespace Pastor {
                         error ("error"); // TODO: send dialog for error
                     } else {
                         string raw_link = get_raw_link (message);
-                        if ("http" in raw_link)
-                            print (raw_link); // TODO: show raw_link for user
-                        else
+                        if ("http" in raw_link) {
+                            win.set_result (raw_link);
+                            win.main_stack.visible_child_name = "result";
+                        } else {
                             error ("error: %s", raw_link); // TODO: send dialog for error
+                        }
                     }
                 });
 
