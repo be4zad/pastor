@@ -20,6 +20,10 @@
 
 namespace Pastor {
     public class PastebinViradevIr : GLib.Object {
+        public PastebinViradevIr (string paste_text, Window win) {
+            send_request (paste_text, win);
+        }
+
         string get_raw_link (Soup.Message request_message) {
             try {
                 string pastebin_id = "";

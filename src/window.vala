@@ -43,12 +43,13 @@ namespace Pastor {
             Object (application: app);
             add_text_input_overlay ();
             add_text_input_buffer ();
-            /*get_link_button.clicked.connect (() => {
-            });*/
+            get_link_button.clicked.connect (() => {
+                new Request ("pastebin.viradev.ir", text_input_buffer.text, this);
+            });
         }
 
         protected void add_text_input_buffer () {
-            text_input_buffer = new TextBuffer(null);
+            text_input_buffer = new TextBuffer (null);
             text_input.buffer = text_input_buffer;
             text_input_buffer.changed.connect (() => {
                 if (text_input_buffer.text != "")
