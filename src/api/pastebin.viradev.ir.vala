@@ -50,14 +50,14 @@ namespace Pastor {
 
                 session.queue_message (message,  (sess, mess) => {
                     if (mess.status_code != 200) {
-                        error ("error"); // TODO: send dialog for error
+                        win.show_toast ("Error");
                     } else {
                         string raw_link = get_raw_link (message);
                         if ("http" in raw_link) {
                             win.set_result (raw_link);
                             win.main_stack.visible_child_name = "result";
                         } else {
-                            error ("error: %s", raw_link); // TODO: send dialog for error
+                            win.show_toast (@"Error: $raw_link");
                         }
                     }
                 });
@@ -65,7 +65,8 @@ namespace Pastor {
                 Idle.add (send_request.callback);
                 yield;
             } catch (Error err) {
-                error ("error: %s", err.message); // TODO: send dialog for error
+                string error_text = (err.message).to_string();
+                win.show_toast (@"Error: $error_text");
             }
         }
     }

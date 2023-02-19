@@ -35,6 +35,8 @@ namespace Pastor {
         private unowned StackPage main_clamp_result_page;
         [GtkChild]
         private unowned Adw.ActionRow result_action_row;
+        [GtkChild]
+        private unowned Adw.ToastOverlay toast_overlay;
 
         private Label text_input_overlay_label;
         private TextBuffer text_input_buffer;
@@ -74,6 +76,11 @@ namespace Pastor {
         public void set_result (string pastebin_link) {
             if (pastebin_link != "")
                 result_action_row.title = pastebin_link;
+        }
+
+        public void show_toast (string title) {
+            var toast = new Adw.Toast (title);
+            toast_overlay.add_toast (toast);
         }
     }
 }
