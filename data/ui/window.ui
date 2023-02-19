@@ -75,6 +75,7 @@
                                         <property name="halign">center</property>
                                         <property name="width-request">230</property>
                                         <property name="margin-top">20</property>
+                                        <property name="sensitive">false</property>
                                         <style>
                                           <class name="suggested-action"/>
                                           <class name="pill"/>

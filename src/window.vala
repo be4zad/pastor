@@ -54,10 +54,13 @@ namespace Pastor {
             text_input_buffer = new TextBuffer (null);
             text_input.buffer = text_input_buffer;
             text_input_buffer.changed.connect (() => {
-                if (text_input_buffer.text != "")
+                if (text_input_buffer.text != "") {
                     text_input_overlay_label.visible = false;
-                else
+                    get_link_button.sensitive = true;
+                } else {
                     text_input_overlay_label.visible = true;
+                    get_link_button.sensitive = false;
+                }
             });
         }
 
