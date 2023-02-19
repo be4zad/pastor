@@ -4,11 +4,11 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
   <name>Pastor</name>
-  <summary>Paste the text and get the text link</summary>
+  <summary>Enter or paste a text and get the text link</summary>
 	<description>
-	  <p>Pastor is a GNOME application to paste text and get the text link.</p>
+	  <p>Pastor is a GNOME application to enter or paste a text and get the text link.</p>
 
-	  <p>Pastor uses pastebin services. Do not store any important data.</p>
+	  <p>Pastor uses pastebin services. Do not enter any important data.</p>
 	</description>
 
 	<developer_name>Behzad Asbahi</developer_name>

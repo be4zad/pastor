@@ -50,7 +50,7 @@ namespace Pastor {
                 application_name = "Pastor",
                 application_icon = "org.pastor.Pastor",
                 developer_name = "Behzad Asbahi",
-                comments = "Paste the text and get the text link",
+                comments = "Enter or paste a text and get the text link.\n\nPastor uses pastebin services. Do not enter any important data.",
                 version = "0.1.0",
                 developers = developers,
                 copyright = "© 2023 Behzad Asbahi",
